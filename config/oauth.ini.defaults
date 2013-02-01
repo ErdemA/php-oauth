@@ -9,6 +9,7 @@ serviceResources = "protected resource"
 storageBackend = "PdoOAuthStorage"
 
 authenticationMechanism = "DummyResourceOwner"
+;authenticationMechanism = "BasicResourceOwner"
 ;authenticationMechanism = "BrowserIDResourceOwner"
 ;authenticationMechanism = "SspResourceOwner"
 
@@ -64,6 +65,10 @@ cn[]                   = "François Kooman"
 eduPersonEntitlement[] = "urn:x-oauth:entitlement:applications"
 eduPersonEntitlement[] = "foo"
 eduPersonEntitlement[] = "bar"
+
+; HTTP Basic configuration
+[BasicResourceOwner]
+basicUsersFile = "/PATH/TO/APP/config/basicUsers.json"
 
 ; BrowserID configuration
 [BrowserIDResourceOwner]
